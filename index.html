@@ -2,18 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gilbert Siagian | Cybersecurity Portfolio</title>
+  <title>Gilbert Parluhutan Siagian | Web Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -21,7 +14,6 @@
       color: #e2e8f0;
     }
 
-    /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
@@ -40,18 +32,14 @@
       transition: 0.3s;
     }
 
-    .navbar a:hover {
-      color: white;
-    }
+    .navbar a:hover { color: white; }
 
-    /* CONTAINER */
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
 
-    /* HERO */
     .hero {
       text-align: center;
       margin-bottom: 50px;
@@ -84,7 +72,6 @@
       font-weight: bold;
     }
 
-    /* CARD */
     .card {
       background: rgba(30, 41, 59, 0.6);
       padding: 25px;
@@ -111,12 +98,6 @@
       margin-bottom: 10px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
     .skills span {
       display: inline-block;
       background: #334155;
@@ -131,22 +112,16 @@
       margin-top: 40px;
       color: #94a3b8;
     }
-
-    @media(max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#education">Education</a>
+  <a href="#organization">Organization</a>
   <a href="#certifications">Certifications</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
@@ -171,9 +146,9 @@
   <div class="card" id="about">
     <h2>Professional Summary</h2>
     <p>
-      Network Security Engineer at PT Mastersystem Infotama with experience managing enterprise security platforms 
-      including endpoint, email, and network protection. Skilled in threat monitoring, incident response, 
-      and system optimization using Trend Micro, Check Point, FortiGate, and IBM QRadar.
+      Network Security Engineer with experience managing enterprise security platforms,
+      monitoring threats, and handling endpoint security using tools such as Trend Micro,
+      Check Point, FortiGate, and IBM QRadar.
     </p>
   </div>
 
@@ -182,30 +157,41 @@
     <h2>Work Experience</h2>
 
     <p><b>PT Mastersystem Infotama</b> — Network Security Engineer (2025 - Present)</p>
-    <p>• Manage enterprise security platforms for endpoints, email, and network protection</p>
-    <p>• Monitor threats and respond to security incidents</p>
+    <p>• Manage enterprise security platforms and monitor threats</p>
 
     <br>
 
     <p><b>PT Bank KEB Hana Indonesia</b> — Endpoint Security Assistant Manager (2023 - 2025)</p>
-    <p>• Managed mail gateway and filtered malicious email traffic</p>
-    <p>• Monitored EDR logs and endpoint security</p>
-    <p>• Handled patch management and asset tracking</p>
+    <p>• Managed email security, EDR monitoring, and patching</p>
 
     <br>
 
-    <p><b>PT Bank KEB Hana Indonesia</b> — Talent Bankers Program IT (2022 - 2023)</p>
-    <p>• Learned Java programming and project management</p>
-    <p>• Implemented file-sharing and asset management solutions</p>
+    <p><b>PT Bank KEB Hana Indonesia</b> — Talent Program IT (2022 - 2023)</p>
+    <p>• Worked on IT systems and internal tools</p>
   </div>
 
   <!-- EDUCATION -->
   <div class="card" id="education">
     <h2>Education</h2>
-    <p><b>Universitas Indonesia</b> — Bachelor of Engineering (2022) - GPA: 3.48</p>
-    <p>Scholarship Awardee: </p>
-    <p>• Pertamina Sobat Bumi Scholarship (2019-2020)</p>
-    <p>• Hana Nanum Foundation Scholarship (2020-2021)</p>
+    <p><b>Universitas Indonesia</b> — Bachelor of Engineering (2022) | GPA: 3.48</p>
+    <p>• Pertamina Sobat Bumi Scholarship</p>
+    <p>• Hana Nanum Foundation Scholarship</p>
+  </div>
+
+  <!-- ORGANIZATION -->
+  <div class="card" id="organization">
+    <h2>Organization Experience</h2>
+
+    <p><b>Teknika FTUI</b> — Head of Human Resources and Development (2020 - 2021)</p>
+    <p>• Led HR development programs and internal evaluations</p>
+    <p>• Improved organizational performance and collaboration</p>
+
+    <br>
+
+    <p><b>NetIC FTUI</b> — Vice Head Media & Relation (2019 - 2020)</p>
+    <p>• Managed content, website, and media strategy</p>
+    <p>• Strengthened partnerships and community engagement</p>
+
   </div>
 
   <!-- CERTIFICATIONS -->
@@ -213,9 +199,7 @@
     <h2>Certifications</h2>
     <p>• Certified Threat Intelligence Analyst</p>
     <p>• Certified Network Defender</p>
-    <p>• OPSWAT Email Security Associate</p>
     <p>• Fortinet Certified Associate</p>
-    <p>• Proofpoint Email Authentication Specialist</p>
   </div>
 
   <!-- SKILLS -->
@@ -224,36 +208,25 @@
     <div class="skills">
       <span>Trend Micro</span>
       <span>FortiGate</span>
-      <span>Chyberark</span>
       <span>IBM QRadar</span>
       <span>SentinelOne</span>
       <span>Filecloud</span>
-      <span>Checkpoint</span>
-      <span>Palo Alto</span>
-      <span>Wireshark</span>
-      <span>Proofpoint</span>
       <span>Ivanti</span>
+      <span>Checkpoint</span>
+      <span>Cyberark</span>
+      <span>Palo Alto</span>
+      <span>Proofpoint</span>
     </div>
   </div>
 
-  <!-- CONTACT -->
-  <div class="card" id="contact">
-    <h2>Contact</h2>
-    <p>📧 <a href="mailto:gilbertsiagian1@gmail.com">gilbertsiagian1@gmail.com</a></p>
-    <p>🔗 <a href="https://linkedin.com/in/gilbertsiagian" target="_blank">linkedin.com/in/gilbertsiagian</a></p>
-    <p>📍 South Tangerang, Indonesia</p>
-  </div>
-
   <div class="footer">
-    <p>© 2026 Gilbert Siagian</p>
+    <p>© 2026 Gilbert Parluhutan Siagian</p>
   </div>
 
 </div>
 
-<!-- ANIMATION -->
 <script>
   const cards = document.querySelectorAll('.card');
-
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
@@ -261,7 +234,6 @@
       }
     });
   });
-
   cards.forEach(card => observer.observe(card));
 </script>
 
