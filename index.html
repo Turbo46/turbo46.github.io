@@ -5,9 +5,15 @@
   <title>Gilbert Siagian | Cybersecurity Portfolio</title>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,33 +21,57 @@
       color: #e2e8f0;
     }
 
+    /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
-      background: rgba(2,6,23,0.7);
       backdrop-filter: blur(10px);
+      background: rgba(2, 6, 23, 0.7);
       padding: 15px;
       text-align: center;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .navbar a {
       color: #38bdf8;
       margin: 0 15px;
       text-decoration: none;
+      transition: 0.3s;
     }
 
+    .navbar a:hover {
+      color: white;
+    }
+
+    /* CONTAINER */
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
 
+    /* HERO */
     .hero {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
-    .hero h1 { color: #38bdf8; }
+    .hero h1 {
+      font-size: 36px;
+      color: #38bdf8;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      margin-top: 10px;
+    }
+
+    .contact-top a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 5px;
+    }
 
     .btn {
       display: inline-block;
@@ -54,28 +84,72 @@
       font-weight: bold;
     }
 
+    /* CARD */
     .card {
-      background: rgba(30,41,59,0.6);
-      padding: 20px;
+      background: rgba(30, 41, 59, 0.6);
+      padding: 25px;
       margin-bottom: 20px;
-      border-radius: 12px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     h2 {
       color: #38bdf8;
       margin-bottom: 10px;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #334155;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #94a3b8;
+    }
+
+    @media(max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#education">Education</a>
   <a href="#certifications">Certifications</a>
   <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
 </div>
 
 <div class="container">
@@ -85,8 +159,12 @@
     <h1>Gilbert Parluhutan Siagian</h1>
     <p>Information Security | Blue Team | EDR | Threat Intelligence</p>
 
-    <!-- DOWNLOAD CV -->
-    <a href="CV Gilbert _ ATS 2026.pdf" class="btn" download>Download CV</a>
+    <p class="contact-top">
+      📧 <a href="mailto:gilbertsiagian1@gmail.com">gilbertsiagian1@gmail.com</a> |
+      🔗 <a href="https://linkedin.com/in/gilbertsiagian" target="_blank">LinkedIn</a>
+    </p>
+
+    <a href="CV Gilbert_ATS 2026.pdf" class="btn" download>Download CV</a>
   </div>
 
   <!-- ABOUT -->
@@ -95,7 +173,7 @@
     <p>
       Network Security Engineer at PT Mastersystem Infotama with experience managing enterprise security platforms 
       including endpoint, email, and network protection. Skilled in threat monitoring, incident response, 
-      and system optimization using tools such as Trend Micro, Check Point, FortiGate, and IBM QRadar.
+      and system optimization using Trend Micro, Check Point, FortiGate, and IBM QRadar.
     </p>
   </div>
 
@@ -119,14 +197,13 @@
     <p><b>PT Bank KEB Hana Indonesia</b> — Talent Bankers Program IT (2022 - 2023)</p>
     <p>• Learned Java programming and project management</p>
     <p>• Implemented file-sharing and asset management solutions</p>
-
   </div>
 
   <!-- EDUCATION -->
   <div class="card" id="education">
     <h2>Education</h2>
     <p><b>Universitas Indonesia</b> — Bachelor of Engineering (2022) - GPA: 3.48</p>
-    <p>Scholarship Awardee</p>
+    <p>Scholarship Awardee: </p>
     <p>• Pertamina Sobat Bumi Scholarship (2019-2020)</p>
     <p>• Hana Nanum Foundation Scholarship (2020-2021)</p>
   </div>
@@ -144,13 +221,49 @@
   <!-- SKILLS -->
   <div class="card" id="skills">
     <h2>Skills & Tools</h2>
-    <p>
-      Trend Micro, FortiGate, Check Point, IBM QRadar, SentinelOne, Wireshark,
-      VirusTotal, Patch Management, Log Analysis, Email Security, Endpoint Security
-    </p>
+    <div class="skills">
+      <span>Trend Micro</span>
+      <span>FortiGate</span>
+      <span>Chyberark</span>
+      <span>IBM QRadar</span>
+      <span>SentinelOne</span>
+      <span>Filecloud</span>
+      <span>Checkpoint</span>
+      <span>Palo Alto</span>
+      <span>Wireshark</span>
+      <span>Proofpoint</span>
+      <span>Ivanti</span>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="card" id="contact">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:gilbertsiagian1@gmail.com">gilbertsiagian1@gmail.com</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/gilbertsiagian" target="_blank">linkedin.com/in/gilbertsiagian</a></p>
+    <p>📍 South Tangerang, Indonesia</p>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Gilbert Siagian</p>
   </div>
 
 </div>
+
+<!-- ANIMATION -->
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>
