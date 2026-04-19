@@ -1,92 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Gilbert Siagian | Cybersecurity Portfolio</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial;
-      margin: 40px;
-      background: #0f172a;
-      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: #e2e8f0;
     }
 
-    h1 { color: #38bdf8; }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-    }
-
-    /* NAVBAR CSS */
+    /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
-      background: #020617;
+      backdrop-filter: blur(10px);
+      background: rgba(2, 6, 23, 0.7);
       padding: 15px;
       text-align: center;
       z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .navbar a {
       color: #38bdf8;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      transition: 0.3s;
     }
 
     .navbar a:hover {
       color: white;
     }
 
-    html {
-      scroll-behavior: smooth;
+    /* CONTAINER */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
-  </style>
 
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #38bdf8;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      margin-top: 10px;
+    }
+
+    /* CARD */
+    .card {
+      background: rgba(30, 41, 59, 0.6);
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* SKILLS */
+    .skills span {
+      display: inline-block;
+      background: #334155;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #94a3b8;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-<!-- NAVBAR (THIS MUST BE HERE, NOT IN STYLE) -->
+<!-- NAVBAR -->
 <div class="navbar">
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#skills">Skills</a>
-  <a href="#certifications">Certifications</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </div>
 
-<h1>Gilbert Parluhutan Siagian</h1>
-<p>Information Security | Blue Team | EDR | Threat Intelligence</p>
+<div class="container">
 
-<!-- ABOUT -->
-<div class="card" id="about">
-  <h2>About Me</h2>
-  <p>
-    Information Security professional experienced in monitoring, patching, 
-    endpoint security, and log analysis.
-  </p>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Gilbert Parluhutan Siagian</h1>
+    <p>Information Security | Blue Team | EDR | Threat Intelligence</p>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="card" id="about">
+    <h2>About Me</h2>
+    <p>
+      Information Security professional with experience in monitoring, patching,
+      endpoint protection, and log analysis. Focused on improving system security
+      and organizational resilience.
+    </p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="grid" id="experience">
+    <div class="card">
+      <h2>Mastersystem</h2>
+      <p><b>Network Security Engineer</b></p>
+      <p>Handling endpoint security, monitoring alerts, and managing enterprise tools.</p>
+    </div>
+
+    <div class="card">
+      <h2>Hana Bank</h2>
+      <p><b>Information Security</b></p>
+      <p>Worked on monitoring, patching, and maintaining system compliance.</p>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="card" id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skills">
+      <span>EDR</span>
+      <span>SIEM</span>
+      <span>Log Analysis</span>
+      <span>Threat Intelligence</span>
+      <span>Patch Management</span>
+      <span>Endpoint Security</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="card" id="projects">
+    <h2>Security Case Studies</h2>
+    <p>• Investigated endpoint alerts and validated potential threats</p>
+    <p>• Managed patch deployment across systems</p>
+    <p>• Performed log analysis to detect anomalies</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@email.com</p>
+    <p>LinkedIn: your-linkedin-link</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2026 Gilbert Siagian</p>
+  </div>
+
 </div>
 
-<!-- EXPERIENCE -->
-<div class="card" id="experience">
-  <h2>Experience</h2>
-  <p><b>Mastersystem</b> - Network Security Engineer (Current)</p>
-  <p><b>Hana Bank</b> - Information Security (Past)</p>
-</div>
+<!-- ANIMATION SCRIPT -->
+<script>
+  const cards = document.querySelectorAll('.card');
 
-<!-- SKILLS -->
-<div class="card" id="skills">
-  <h2>Skills</h2>
-  <p>EDR, SIEM, Log Analysis, Threat Intelligence, Patch Management</p>
-</div>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  });
 
-<!-- CERTIFICATIONS -->
-<div class="card" id="certifications">
-  <h2>Certifications</h2>
-  <p>EC-Council Certified Threat Intelligence Analyst</p>
-</div>
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+</script>
 
 </body>
 </html>
