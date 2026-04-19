@@ -5,15 +5,9 @@
   <title>Gilbert Siagian | Cybersecurity Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -21,123 +15,67 @@
       color: #e2e8f0;
     }
 
-    /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
+      background: rgba(2,6,23,0.7);
       backdrop-filter: blur(10px);
-      background: rgba(2, 6, 23, 0.7);
       padding: 15px;
       text-align: center;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .navbar a {
       color: #38bdf8;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
     }
 
-    .navbar a:hover {
-      color: white;
-    }
-
-    /* CONTAINER */
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
 
-    /* HERO */
     .hero {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
-    .hero h1 {
-      font-size: 36px;
-      color: #38bdf8;
+    .hero h1 { color: #38bdf8; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #38bdf8;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .hero p {
-      color: #94a3b8;
-      margin-top: 10px;
-    }
-
-    /* CARD */
     .card {
-      background: rgba(30, 41, 59, 0.6);
-      padding: 25px;
+      background: rgba(30,41,59,0.6);
+      padding: 20px;
       margin-bottom: 20px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      transition: 0.3s;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border-radius: 12px;
     }
 
     h2 {
       color: #38bdf8;
       margin-bottom: 10px;
     }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    /* SKILLS */
-    .skills span {
-      display: inline-block;
-      background: #334155;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    /* FOOTER */
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #94a3b8;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#certifications">Certifications</a>
   <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
 </div>
 
 <div class="container">
@@ -146,84 +84,72 @@
   <div class="hero">
     <h1>Gilbert Parluhutan Siagian</h1>
     <p>Information Security | Blue Team | EDR | Threat Intelligence</p>
+
+    <!-- DOWNLOAD CV -->
+    <a href="CV_Gilbert_Siagian.pdf" class="btn" download>Download CV</a>
   </div>
 
   <!-- ABOUT -->
   <div class="card" id="about">
-    <h2>About Me</h2>
+    <h2>Professional Summary</h2>
     <p>
-      Information Security professional with experience in monitoring, patching,
-      endpoint protection, and log analysis. Focused on improving system security
-      and organizational resilience.
+      Network Security Engineer at PT Mastersystem Infotama with experience managing enterprise security platforms 
+      including endpoint, email, and network protection. Skilled in threat monitoring, incident response, 
+      and system optimization using tools such as Trend Micro, Check Point, FortiGate, and IBM QRadar.
     </p>
   </div>
 
   <!-- EXPERIENCE -->
-  <div class="grid" id="experience">
-    <div class="card">
-      <h2>Mastersystem</h2>
-      <p><b>Network Security Engineer</b></p>
-      <p>Handling endpoint security, monitoring alerts, and managing enterprise tools.</p>
-    </div>
+  <div class="card" id="experience">
+    <h2>Work Experience</h2>
 
-    <div class="card">
-      <h2>Hana Bank</h2>
-      <p><b>Information Security</b></p>
-      <p>Worked on monitoring, patching, and maintaining system compliance.</p>
-    </div>
+    <p><b>PT Mastersystem Infotama</b> — Network Security Engineer (2025 - Present)</p>
+    <p>• Manage enterprise security platforms for endpoints, email, and network protection</p>
+    <p>• Monitor threats and respond to security incidents</p>
+
+    <br>
+
+    <p><b>PT Bank KEB Hana Indonesia</b> — Endpoint Security Assistant Manager (2023 - 2025)</p>
+    <p>• Managed mail gateway and filtered malicious email traffic</p>
+    <p>• Monitored EDR logs and endpoint security</p>
+    <p>• Handled patch management and asset tracking</p>
+
+    <br>
+
+    <p><b>PT Bank KEB Hana Indonesia</b> — Talent Bankers Program IT (2022 - 2023)</p>
+    <p>• Learned Java programming and project management</p>
+    <p>• Implemented file-sharing and asset management solutions</p>
+
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="card" id="education">
+    <h2>Education</h2>
+    <p><b>Universitas Indonesia</b> — Bachelor of Engineering (2022)</p>
+    <p>• Pertamina Sobat Bumi Scholarship</p>
+    <p>• Hana Nanum Foundation Scholarship</p>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="card" id="certifications">
+    <h2>Certifications</h2>
+    <p>• Certified Threat Intelligence Analyst</p>
+    <p>• Certified Network Defender</p>
+    <p>• OPSWAT Email Security Associate</p>
+    <p>• Fortinet Certified Associate</p>
+    <p>• Proofpoint Email Authentication Specialist</p>
   </div>
 
   <!-- SKILLS -->
   <div class="card" id="skills">
     <h2>Skills & Tools</h2>
-    <div class="skills">
-      <span>EDR</span>
-      <span>SIEM</span>
-      <span>Log Analysis</span>
-      <span>Threat Intelligence</span>
-      <span>Patch Management</span>
-      <span>Endpoint Security</span>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="card" id="projects">
-    <h2>Security Case Studies</h2>
-    <p>• Investigated endpoint alerts and validated potential threats</p>
-    <p>• Managed patch deployment across systems</p>
-    <p>• Performed log analysis to detect anomalies</p>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="card" id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@email.com</p>
-    <p>LinkedIn: your-linkedin-link</p>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <p>© 2026 Gilbert Siagian</p>
+    <p>
+      Trend Micro, FortiGate, Check Point, IBM QRadar, SentinelOne, Wireshark,
+      VirusTotal, Patch Management, Log Analysis, Email Security, Endpoint Security
+    </p>
   </div>
 
 </div>
-
-<!-- ANIMATION SCRIPT -->
-<script>
-  const cards = document.querySelectorAll('.card');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-</script>
 
 </body>
 </html>
